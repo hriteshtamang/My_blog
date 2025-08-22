@@ -1,0 +1,175 @@
+/* General Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body { background: #f9f9f9; color: #333; line-height: 1.6; transition: 0.3s; }
+.dark { background: #1e1e1e; color: #f1f1f1; }
+
+/* Header */
+header { background: #222; color: white; padding: 1rem; text-align: center; }
+header nav { margin-top: 0.5rem; }
+header nav a, header nav button {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+header nav a.active { border-bottom: 2px solid gold; }
+
+/* Articles */
+.articles { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 2rem; }
+article { background: white; padding: 1rem; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: 0.3s; }
+article img { width: 100%; border-radius: 10px; }
+article:hover { transform: translateY(-5px); }
+.dark article { background: #2a2a2a; }
+
+/* About & Contact */
+.about, .contact { padding: 2rem; max-width: 800px; margin: auto; text-align: center; }
+.contact form { display: flex; flex-direction: column; gap: 10px; margin-top: 1rem; }
+.contact input, .contact textarea { padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+.contact button { padding: 10px; border: none; background: #222; color: white; cursor: pointer; border-radius: 5px; }
+.contact button:hover { background: #444; }
+
+/* Footer */
+footer { text-align: center; padding: 1rem; background: #222; color: white; margin-top: 2rem; }
+.socials { margin-top: 10px; }
+.socials a { margin: 0 8px; font-size: 20px; color: white; text-decoration: none; }
+.socials a:hover { color: gold; }
+.page-container {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #1c1c1c;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  color: #f5f5f5;
+}
+
+.page-container h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #4db8ff;
+}
+
+.page-container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.social-icons {
+  margin: 20px 0;
+}
+
+.social-icons a {
+  font-size: 24px;
+  margin: 0 10px;
+  color: #4db8ff;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #1da1f2;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #4db8ff;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.back-btn:hover {
+  background: #1da1f2;
+}
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-container {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #1c1c1c;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  color: #f5f5f5;
+
+  /* ✨ Animation */
+  animation: fadeIn 1s ease-in-out;
+}
+/* Social Icons Hover Bounce */
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 28px;
+  color: #f5f5f5;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #1da1f2; /* Twitter blue effect */
+  transform: translateY(-6px) scale(1.1); /* bounce + zoom */
+}
+/* Default Light Mode */
+body {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+#dark-toggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #333;
+  color: #fff;
+}
+/* White border for square boxes */
+.header-boxes .box {
+  border: 2px solid #fff;   /* White border */
+  border-radius: 10px;      /* Slightly rounded corners */
+  margin: 5px;              /* Space between boxes */
+  display: inline-block;
+}
+/* force white square borders on title, Home, About, Contact, Dark toggle */
+.header-boxes .box,
+.header-boxes > a,
+.header-boxes > button,
+.header-boxes > div {
+  border: 2px solid #fff !important;
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: inline-block;
+}
+
+
+
+
+
+
